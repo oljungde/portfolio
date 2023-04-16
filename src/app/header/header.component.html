@@ -1,0 +1,10 @@
+<div class="header">
+    <a href="index.html"><img src="../../assets/img/logo.png" alt="" class="logo"></a>
+
+    <button [class.hamburger]="true" (click)="toggleMenu()" class="no-animation"></button>
+    <nav class="menu" [@slideAnimation]="menuOpen ? 'open' : 'closed'">
+        <a href="#"><span></span>About me</a>
+        <a href="#"><span></span>My skills</a>
+        <a href="#"><span></span>Portfolio</a>
+    </nav>
+</div>

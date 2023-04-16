@@ -1,0 +1,21 @@
+@use './assets/scss/_fonts.scss';
+@use './assets/scss/_variables.scss';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: var(--color-background);
+    display: flex;
+    justify-content: center;
+    font: var(--font-size-regular) 'Overpass', sans-serif;
+}
