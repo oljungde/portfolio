@@ -92,8 +92,8 @@ nav {
     left: 0;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    row-gap: 72px;
     z-index: 10;
 
     &.open {
@@ -103,6 +103,14 @@ nav {
     &.closed {
         bottom: -100%;
     }
+}
+
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 48px;
 
     a {
         width: 680px;
@@ -110,9 +118,14 @@ nav {
         display: flex;
         justify-content: center;
         padding: 10px;
+        border: 5px solid transparent;
         font: bold 96px 'Syne', sans-serif;
         text-decoration: none;
         color: var(--color-font);
+
+        &:active {
+            border: 5px solid black;
+        }
 
         &::before {
             content: '';
@@ -124,7 +137,6 @@ nav {
             left: -5px;
             border-bottom: 5px solid black;
             border-left: 5px solid black;
-            // transition: 225ms;
         }
 
         &:hover::before {
@@ -168,5 +180,55 @@ nav {
         width: 0px;
         height: 0px;
         border-color: transparent;
+    }
+}
+
+.menu-footer {
+    background-image: url(../../assets/img/menu-footer-bg.png);
+    background-size: cover;
+    height: 320px;
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 96px 48px;
+    color: var(--color-background);
+
+    a {
+        justify-content: flex-start;
+        padding: 0;
+        color: var(--color-background);
+        border: none;
+
+        &:hover {
+            color: var(--color-accent);
+        }
+    }
+
+    .menu-footer-left {
+        display: flex;
+        flex-direction: column;
+
+        .menu-footer-headline {
+            font: 800 72px 'Syne', sans-serif;
+            text-decoration: none;
+        }
+
+        .menu-footer-email {
+            font: 24px 'Overpass', sans-serif;
+        }
+    }
+
+    .menu-footer-social-links {
+        display: flex;
+        gap: 32px;
+
+        a {
+            transition: all 225ms ease-in-out;
+
+            &:hover {
+                transform: translateY(-8px);
+            }
+        }
     }
 }
