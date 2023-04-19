@@ -1,21 +1,21 @@
-@use './assets/scss/_fonts.scss';
-@use './assets/scss/_variables.scss';
+@use './assets/css/_fonts.css';
+@use './assets/css/_variables.css';
 
 html,
 body {
+    min-height: 100%;
+    width: 100%;
+    background-color: var(--color-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
+    font: 10px 'Overpass', sans-serif;
+    color: var(--color-font);
     scroll-behavior: smooth;
 }
 
 * {
     box-sizing: border-box;
-}
-
-body {
-    width: 100%;
-    background-color: var(--color-background);
-    display: flex;
-    justify-content: center;
-    font: var(--font-size-regular) 'Overpass', sans-serif;
 }

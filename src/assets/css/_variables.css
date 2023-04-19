@@ -1,7 +1,9 @@
 :root {
+    --header-height: 120px;
+
     --color-background: #fffcf3;
     --color-font: #000000;
     --color-accent: #ff9900;
 
-    --font-size-regular: 24px;
+    --font-size-regular: 2.4rem;
 }

@@ -1,25 +1,50 @@
-.header {
+header {
+    height: var(--header-height);
     width: 100%;
-    background-color: #fffcf3;
-    position: sticky;
+    background-color: var(--color-background);
+    position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.header-content {
+    height: 120px;
+    width: 100%;
+    max-width: 144rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 32px 96px;
+
+    a {
+        height: 56px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 48px;
+    }
+
+    @media (max-width: 456px) {
+        padding: 32px 24px;
+    }
 }
 
 .logo {
-    height: 50px;
+    height: 56px;
     object-fit: cover;
 }
 
 button.hamburger {
-    height: 54px;
-    width: 59px;
+    height: 38px;
+    width: 44px;
+    object-fit: contain;
     background-color: transparent;
-    background-image: url('../../assets/img/menu-1.png');
+    background-image: url('/assets/img/menu-1.png');
     background-position: center center;
     background-repeat: no-repeat;
     padding: 0;
@@ -37,23 +62,23 @@ button.hamburger.active {
 
 @keyframes show-menu {
     0% {
-        background-image: url('../../assets/img/menu-1.png');
+        background-image: url('/assets/img/menu-1.png');
     }
 
     25% {
-        background-image: url('../../assets/img/menu-2.png');
+        background-image: url('/assets/img/menu-2.png');
     }
 
     50% {
-        background-image: url('../../assets/img/menu-3.png');
+        background-image: url('/assets/img/menu-3.png');
     }
 
     75% {
-        background-image: url('../../assets/img/menu-4.png');
+        background-image: url('/assets/img/menu-4.png');
     }
 
     100% {
-        background-image: url('../../assets/img/menu-5.png');
+        background-image: url('/assets/img/menu-5.png');
     }
 }
 
@@ -63,28 +88,28 @@ button.hamburger:not(.active) {
 
 @keyframes hide-menu {
     0% {
-        background-image: url('../../assets/img/menu-5.png');
+        background-image: url('/assets/img/menu-5.png');
     }
 
     25% {
-        background-image: url('../../assets/img/menu-4.png');
+        background-image: url('/assets/img/menu-4.png');
     }
 
     50% {
-        background-image: url('../../assets/img/menu-3.png');
+        background-image: url('/assets/img/menu-3.png');
     }
 
     75% {
-        background-image: url('../../assets/img/menu-2.png');
+        background-image: url('/assets/img/menu-2.png');
     }
 
     100% {
-        background-image: url('../../assets/img/menu-1.png');
+        background-image: url('/assets/img/menu-1.png');
     }
 }
 
 nav {
-    height: calc(100vh - 122px);
+    height: calc(100vh - 120px);
     width: 100%;
     background-color: var(--color-background);
     position: fixed;
@@ -157,6 +182,43 @@ nav {
         &:hover::after {
             border-color: black;
         }
+
+        @media (max-width: 992px),
+        (max-height: 768px) {
+            width: 480px;
+            font-size: 72px;
+
+            &::after {
+                width: calc(480px / 2);
+            }
+
+            &:hover::before {
+                animation: border-left-animation-992 0.3s forwards;
+            }
+        }
+
+        @media (max-width: 576px) {
+            width: 248px;
+            font-size: 40px;
+
+            &::before {
+                height: 26px;
+                width: 19px;
+            }
+
+            &::after {
+                width: calc(248px / 2);
+            }
+
+            &:hover::before {
+                animation: border-left-animation-576 0.3s forwards;
+            }
+        }
+    }
+
+    @media (max-width: 576px),
+    (max-height: 768px) {
+        row-gap: 24px;
     }
 }
 
@@ -183,16 +245,77 @@ nav {
     }
 }
 
+@media (max-width: 992px) {
+    @keyframes border-left-animation-992 {
+        0% {
+            height: 52px;
+            width: 39px;
+        }
+
+        20% {
+            width: calc(480px);
+            height: 0px;
+        }
+
+        99% {
+            width: calc(480px);
+            height: 0px;
+        }
+
+        100% {
+            width: 0px;
+            height: 0px;
+            border-color: transparent;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    @keyframes border-left-animation-576 {
+        0% {
+            height: 26px;
+            width: 19px;
+        }
+
+        20% {
+            width: calc(248px);
+            height: 0px;
+        }
+
+        99% {
+            width: calc(248px);
+            height: 0px;
+        }
+
+        100% {
+            width: 0px;
+            height: 0px;
+            border-color: transparent;
+        }
+    }
+}
+
 .menu-footer {
-    background-image: url(../../assets/img/menu-footer-bg.png);
-    background-size: cover;
     height: 320px;
-    width: 1440px;
+    width: 100%;
+    background-image: url('/assets/img/menu-footer-bg.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: var(--color-background);
+
+    @media (max-width: 456px) {
+        height: 260px;
+    }
+}
+
+.menu-footer-content {
+    width: 100%;
+    max-width: 144rem;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
     padding: 0 96px 48px;
-    color: var(--color-background);
 
     a {
         justify-content: flex-start;
@@ -217,10 +340,17 @@ nav {
         .menu-footer-email {
             font: 24px 'Overpass', sans-serif;
         }
+
+        @media (max-width: 456px) {
+            .menu-footer-headline {
+                font-size: 32px;
+            }
+        }
     }
 
     .menu-footer-social-links {
         display: flex;
+        align-items: flex-end;
         gap: 32px;
 
         a {
@@ -229,6 +359,55 @@ nav {
             &:hover {
                 transform: translateY(-8px);
             }
+        }
+    }
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+        gap: 16px;
+
+        .menu-footer-left {
+            align-items: flex-start;
+        }
+
+        .menu-footer-social-links {
+            justify-content: flex-end;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 48px 48px;
+
+        .menu-footer-left {
+            .menu-footer-headline {
+                font-size: 48px;
+            }
+
+            .menu-footer-email {
+                font-size: 18px;
+            }
+        }
+
+        .menu-footer-social-links {
+            gap: 16px;
+        }
+    }
+
+    @media (max-width: 456px) {
+        padding: 0 24px 24px;
+
+        .menu-footer-left {
+            .menu-footer-headline {
+                font-size: 32px;
+            }
+
+            .menu-footer-email {
+                font-size: 16px;
+            }
+        }
+
+        .menu-footer-social-links {
+            gap: 8px;
         }
     }
 }
