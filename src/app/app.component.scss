@@ -1,17 +1,14 @@
 main {
     width: 100%;
+    max-width: 144rem;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     padding: var(--header-height) 0 0 0;
     font-size: var(--font-size-regular);
 }
 
-section {
+app-main-site {
     width: 100%;
-    height: 100vh;
-    background-color: green;
-    display: flex;
 }

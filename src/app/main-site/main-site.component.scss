@@ -1,0 +1,19 @@
+section {
+    width: 100%;
+    max-width: 144rem;
+    // display: flex;
+    // flex-direction: row;
+    padding: 0 96px;
+
+    @media (max-width: 992px) {
+        padding: 0 48px;
+    }
+}
+
+app-above-the-fold {
+    height: calc(100vh - var(--header-height));
+    width: 100%;
+    display: flex;
+    padding-bottom: 64px;
+    // border: 1px solid red;
+}
