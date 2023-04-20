@@ -1,7 +1,7 @@
-.above-email-link {
-    writing-mode: vertical-lr;
-    text-orientation: mixed;
-    transform: rotate(180deg);
+.above-the-fold {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .above-center {
@@ -23,6 +23,18 @@
     @media (max-width: 1140px) {
         font-size: 7.2rem;
     }
+
+    @media (max-width: 768px) {
+        font-size: 5.4rem;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 4rem;
+    }
+
+    @media (max-width: 456px) {
+        font-size: 2.6rem;
+    }
 }
 
 .above-subline {
@@ -30,6 +42,14 @@
     flex-direction: row;
     align-items: center;
     gap: 32px;
+
+    @media (max-width: 576px) {
+        gap: 16px;
+    }
+
+    @media (max-width: 456px) {
+        gap: 8px;
+    }
 
     .line-container {
         height: 3px;
@@ -44,6 +64,18 @@
         @media (max-width: 1140px) {
             max-width: 27.2rem;
         }
+
+        @media (max-width: 768px) {
+            max-width: 20rem;
+        }
+
+        @media (max-width: 576px) {
+            max-width: 14.4rem;
+        }
+
+        @media (max-width: 456px) {
+            max-width: 7.2rem;
+        }
     }
 
     .above-name {
@@ -54,21 +86,58 @@
         @media (max-width: 1140px) {
             font-size: 3.2rem;
         }
+
+        @media (max-width: 576px) {
+            font-size: 2.4rem;
+        }
+
+        @media (max-width: 456px) {
+            font-size: 1.8rem;
+        }
     }
 }
 
-.scrolling {
+.email-scroll {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 16px;
-    text-align: center;
+    justify-content: space-between;
 
-    img {
-        animation: scale-arrow 1.25s ease-in-out infinite;
+    .above-email-link {
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+        transform: rotate(180deg);
+
+        @media (max-width: 576px) {
+            font-size: 1.8rem;
+        }
+    }
+
+    .scrolling {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 16px;
+        text-align: center;
+
+        a {
+
+            @media (max-width: 576px) {
+                font-size: 1.8rem;
+            }
+        }
+
+        img {
+            animation: scale-arrow 1.25s ease-in-out infinite;
+
+            @media (max-width: 576px) {
+                width: 32px;
+                object-fit: cover;
+            }
+        }
     }
 }
+
+
 
 @keyframes scale-arrow {
     0% {
@@ -76,7 +145,7 @@
     }
 
     50% {
-        transform: scale(1.05);
+        transform: scale(1.08);
     }
 
     100% {

@@ -42,7 +42,7 @@ header {
 button.hamburger {
     height: 38px;
     width: 44px;
-    object-fit: contain;
+    background-size: contain;
     background-color: transparent;
     background-image: url('/assets/img/menu-1.png');
     background-position: center center;
@@ -50,6 +50,11 @@ button.hamburger {
     padding: 0;
     border: none;
     cursor: pointer;
+
+    @media (max-width: 576px) {
+        height: 28px;
+        width: 34px;
+    }
 }
 
 .no-animation {
