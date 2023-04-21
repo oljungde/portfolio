@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./above-the-fold.component.scss']
 })
 export class AboveTheFoldComponent {
+  linkTo: string = '#';
+  linkName: string = 'Send a message';
 
 }
