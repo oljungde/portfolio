@@ -12,6 +12,7 @@ button {
     &:hover {
         padding: 16px 48px;
         font-weight: bold;
+        color: var(--color-font);
 
         @media (max-width: 456px) {
             padding: 16px 36px;

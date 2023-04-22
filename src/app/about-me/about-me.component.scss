@@ -1,0 +1,17 @@
+.about-me {
+    display: flex;
+    flex-direction: row;
+    gap: 92px;
+}
+
+.about-me-headline {
+    font: 800 7.2rem 'Syne', sans-serif;
+}
+
+.about-me-img {
+    width: 550px;
+    height: 550px;
+    object-fit: cover;
+    border: 3px solid black;
+    border-radius: 50%;
+}
