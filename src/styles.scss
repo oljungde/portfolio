@@ -20,6 +20,22 @@ body {
     box-sizing: border-box;
 }
 
+section {
+    width: 100%;
+    max-width: 144rem;
+    // display: flex;
+    // flex-direction: row;
+    padding: 0 96px;
+
+    @media (max-width: 992px) {
+        padding: 0 48px;
+    }
+
+    @media (max-width: 456px) {
+        padding: 0 24px;
+    }
+}
+
 a {
     text-decoration: none;
     color: var(--color-font);
