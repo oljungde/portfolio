@@ -12,6 +12,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
 import { ButtonComponent } from './button/button.component';
+import { HeaderOffsetDirective } from './header-offset.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ButtonComponent } from './button/button.component';
     SkillsComponent,
     ProjectsComponent,
     FooterComponent,
-    ButtonComponent
+    ButtonComponent,
+    HeaderOffsetDirective
   ],
   imports: [
     BrowserModule,
