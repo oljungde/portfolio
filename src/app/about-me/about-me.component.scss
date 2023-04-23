@@ -24,18 +24,36 @@
 
 .about-me-right {
     min-height: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
-    // justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 48px;
 
     .about-me-img {
         min-width: 530px;
         height: 530px;
         object-fit: cover;
         margin-top: 48px;
-        // border: 3px solid black;
         border-radius: 50%;
+    }
+
+    .about-me-img-border {
+        height: 530px;
+        width: 530px;
+        position: absolute;
+        top: 0;
+        left: -20px;
+        margin-top: 48px;
+        border: 3px solid black;
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 125ms ease-in;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 
     .about-me-arrow {
