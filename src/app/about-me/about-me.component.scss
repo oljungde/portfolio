@@ -1,5 +1,5 @@
 .about-me {
-    min-height: calc(100vh - var(--header-height));
+    min-height: 100vh;
     display: flex;
     gap: 92px;
     padding-top: 64px;
@@ -26,14 +26,22 @@
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    // justify-content: flex-end;
+    align-items: flex-end;
 
     .about-me-img {
-        min-width: 550px;
-        height: 550px;
+        min-width: 530px;
+        height: 530px;
         object-fit: cover;
+        margin-top: 48px;
         // border: 3px solid black;
         border-radius: 50%;
+    }
+
+    .about-me-arrow {
+        width: 215px;
+        height: 215px;
+        object-fit: cover;
     }
 }
 
