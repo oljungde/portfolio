@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AboutMeComponent {
   linkTo: string = '#';
-  linkName: string = `lets's talk`;
-
+  linkName: string = `Lets's talk`;
+  
 }
