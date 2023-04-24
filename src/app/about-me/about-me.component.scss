@@ -1,8 +1,7 @@
 .about-me {
-    min-height: 100vh;
+    min-height: calc(100vh - var(--header-height));
     display: flex;
     gap: 92px;
-    padding-top: 64px;
 }
 
 .about-me-left {
@@ -29,7 +28,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 48px;
+    gap: 24px;
 
     .about-me-img {
         min-width: 530px;
@@ -62,29 +61,3 @@
         object-fit: cover;
     }
 }
-
-
-
-// .about-me-headline {
-//     font: 800 7.2rem 'Syne', sans-serif;
-//     margin-bottom: 48px;
-// }
-
-// .about-me-content {
-//     display: flex;
-//     flex-direction: row;
-//     gap: 92px;
-
-//     .about-me-text {
-//         display: flex;
-//         flex-direction: column;
-//     }
-// }
-
-// .about-me-img {
-//     min-width: 550px;
-//     height: 550px;
-//     object-fit: cover;
-//     // border: 3px solid black;
-//     border-radius: 50%;
-// }
