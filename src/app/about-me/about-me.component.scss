@@ -42,21 +42,7 @@
         width: 100%;
         text-align: left;
 
-        @media (max-width: 1440px) {
-            font-size: 5.6rem;
-        }
 
-        @media (max-width: 1140px) {
-            font-size: 4.8rem;
-        }
-
-        @media (max-width: 576px) {
-            font-size: 4rem;
-        }
-
-        @media (max-width: 456px) {
-            font-size: 3.2rem;
-        }
     }
 
     p {
