@@ -33,7 +33,11 @@
     }
 
     @media (max-width: 456px) {
-        font-size: 2.6rem;
+        font-size: 3.2rem;
+    }
+
+    @media (max-width: 320px) {
+        font-size: 2.4rem;
     }
 }
 
