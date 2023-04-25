@@ -13,6 +13,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
 import { ButtonComponent } from './button/button.component';
 import { HeaderOffsetDirective } from './header-offset.directive';
+import { SingleProjectComponent } from './single-project/single-project.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HeaderOffsetDirective } from './header-offset.directive';
     ProjectsComponent,
     FooterComponent,
     ButtonComponent,
-    HeaderOffsetDirective
+    HeaderOffsetDirective,
+    SingleProjectComponent
   ],
   imports: [
     BrowserModule,
