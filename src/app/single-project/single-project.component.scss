@@ -1,5 +1,46 @@
 .single-project {
+    width: 100%;
+    display: flex;
+    // flex-direction: row;
+    gap: 80px;
     margin-bottom: 24px;
-    padding: 16px;
-    border: 1px solid red;
+    // border: 1px solid red;
+}
+
+.project-left,
+.project-right {
+    width: 50%;
+}
+
+.project-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 56px;
+}
+
+.project-image {
+    width: 620px;
+    object-fit: cover;
+    border: 1px solid black;
+    filter: saturate(0);
+}
+
+.project-index {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font: bold 48px 'Syne', sans-serif;
+}
+
+.project-title {
+    font: bold 48px 'Syne', sans-serif;
+}
+
+.project-stack {
+    color: var(--color-accent);
+}
+
+.project-description {
+    font-size: 20px;
 }

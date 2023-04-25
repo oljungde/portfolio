@@ -1,9 +1,28 @@
 <div class="single-project">
-    <p>{{ id }} / {{ projectsAmount }}</p>
-    <p>{{ name }}</p>
-    <img src="{{ image }}" alt="">
-    <p>{{ stack }}</p>
-    <p>{{ description }}</p>
-    <a href="{{ url }}">Live</a>
-    <a href="{{ git }}">Github</a>
+    <div class="project-left">
+        <img src="{{ image }}" alt="" class="project-image">
+    </div>
+
+    <div class="project-right">
+        <div class="project-index">
+            {{ id }}/{{ projectsAmount }}
+        </div>
+
+        <div class="project-title">
+            {{ name }}
+        </div>
+
+        <div class="project-stack">
+            {{ stack }}
+        </div>
+
+        <div class="project-description">
+            {{ description }}
+        </div>
+
+        <div class="project-links">
+            <app-button [linkTo]="url" [linkName]="'Live'"></app-button>
+            <app-button [linkTo]="git" [linkName]="'Github'"></app-button>
+        </div>
+    </div>
 </div>

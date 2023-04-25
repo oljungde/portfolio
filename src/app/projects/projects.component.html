@@ -1,7 +1,8 @@
 <section class="projects headerOffset">
     <h2 id="projects">Portfolio</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dicta quia modi rem voluptas et consequuntur cum temporibus! Dolorem eius enim sunt dolore ea perspiciatis, distinctio tenetur
-        atque saepe corporis.</p>
+    <div class="projects-text">
+        <p>Discover a curated collection of my projects showcased below. I encourage you to explore them, test them out, and delve into the source code available on Github.</p>
+    </div>
     <app-single-project *ngFor="let project of projects" [id]="project.id" [name]="project.name" [image]="project.image
     " [stack]="project.stack" [description]="project.description" [url]="project.url" [git]="project.git" [projectsAmount]="projectsAmount"></app-single-project>
 </section>
