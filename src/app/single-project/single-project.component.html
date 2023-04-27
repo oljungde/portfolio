@@ -1,30 +1,31 @@
-<div class="single-project">
-    <div class="project-left">
-        <img src="{{ image }}" alt="" class="project-image">
+<div class="project-left">
+    <img src="{{ image }}" alt="" class="project-image">
+    <img [ngClass]="{'image-circle-even': (index ?? 0) % 2 === 1}" src="../../assets/img/circle-arrow.png" alt="" class="image-circle">
+    <div [ngClass]="{'image-hover-even': (index ?? 0) % 2 === 1}" class="image-hover"></div>
+
+</div>
+
+<div data-aos="fade-left" class="project-right">
+    <div class="project-index">
+        {{ id }}/{{ projectsAmount }}
     </div>
 
-    <div class="project-right">
-        <div class="project-index">
-            {{ id }}/{{ projectsAmount }}
+    <div>
+        <div class="project-title">
+            {{ name }}
         </div>
 
-        <div>
-            <div class="project-title">
-                {{ name }}
-            </div>
-
-            <div class="project-stack">
-                {{ stack }}
-            </div>
-
-            <div class="project-description">
-                {{ description }}
-            </div>
+        <div class="project-stack">
+            {{ stack }}
         </div>
 
-        <div class="project-links">
-            <app-button [linkTo]="url" [linkName]="'Live'"></app-button>
-            <app-button [linkTo]="git" [linkName]="'Github'"></app-button>
+        <div class="project-description">
+            {{ description }}
         </div>
+    </div>
+
+    <div class="project-links">
+        <app-button [linkTo]="url" [linkName]="'Live'"></app-button>
+        <app-button [linkTo]="git" [linkName]="'Github'"></app-button>
     </div>
 </div>

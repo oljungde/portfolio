@@ -14,4 +14,5 @@ export class SingleProjectComponent {
   @Input() url: string | undefined;
   @Input() git: string | undefined;
   @Input() projectsAmount: number | undefined;
+  @Input() index: number | undefined;
 }
