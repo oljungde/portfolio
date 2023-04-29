@@ -2,7 +2,15 @@
     min-height: calc(100vh - var(--header-height));
     display: flex;
     flex-direction: column;
-    row-gap: 96px;
+    row-gap: 88px;
+
+    @media (max-width: 1140px) {
+        row-gap: 32px;
+    }
+
+    @media (max-widt: 456px) {
+        row-gap: 25px;
+    }
 }
 
 h2 {
@@ -15,8 +23,13 @@ h2 {
 }
 
 p {
-    width: 640px;
+    width: 100%;
+    max-width: 620px;
     text-align: center;
+
+    @media (max-width: 576px) {
+        font-size: 2rem;
+    }
 }
 
 .project-wrapper {
@@ -25,9 +38,37 @@ p {
         display: flex;
         gap: 80px;
         margin-bottom: 96px;
+        // border: 1px solid red;
 
         &:nth-child(even) {
             flex-direction: row-reverse;
+        }
+    }
+
+    @media (max-width: 1140px) {
+
+        app-single-project {
+            flex-direction: column;
+            align-items: center;
+            gap: 48px;
+
+            &:nth-child(even) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+
+        app-single-project {
+            margin-bottom: 80px;
+        }
+    }
+
+    @media (max-width: 320px) {
+
+        app-single-project {
+            margin-bottom: 64px;
         }
     }
 }

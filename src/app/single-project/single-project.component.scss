@@ -1,9 +1,9 @@
-.project-left,
-.project-right {
-    width: 50%;
+.project-left {
+    display: flex;
+    justify-content: center;
 }
 
-.project-left {
+.project-left-content {
     position: relative;
 
     &:hover {
@@ -26,6 +26,21 @@
             animation: show-image-circle-even 175ms ease-in-out forwards;
         }
     }
+
+    @media (max-width: 1140px) {
+        width: 100%;
+        max-width: 800px;
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (max-width: 844px) {
+        max-width: calc(100% - 105px);
+    }
+
+    @media (max-width: 576px) {
+        max-width: calc(100% - 75px);
+    }
 }
 
 .project-image {
@@ -34,6 +49,15 @@
     border: 1px solid black;
     filter: saturate(0);
     transition: all 125ms ease-in-out;
+
+    @media (max-width: 1440px) {
+        width: 550px;
+    }
+
+    @media (max-width: 1140px) {
+        width: 100%;
+        max-width: 750px;
+    }
 }
 
 .image-hover {
@@ -45,17 +69,23 @@
     border: 4px solid black;
     opacity: 0;
     transition: all 125ms ease-in-out;
-}
 
-.image-hover-even {
-    height: 394px;
-    width: 620px;
-    position: absolute;
-    top: 25px;
-    left: -25px;
-    border: 4px solid black;
-    opacity: 0;
-    transition: all 125ms ease-in-out;
+    @media (max-width: 1440px) {
+        height: 350px;
+        width: 550px;
+    }
+
+    @media (max-width: 1140px) {
+        height: 100%;
+        width: 100%;
+        max-width: 750px;
+        left: 25px;
+    }
+
+    @media (max-width: 576px) {
+        top: 15px;
+        left: 15px;
+    }
 }
 
 .image-circle {
@@ -69,7 +99,12 @@
     rotate: 135deg;
     transform: translateX(-50%);
     z-index: 99;
-    // transition: all 125ms ease-in-out;
+
+    @media (max-width: 576px) {
+        height: 40px;
+        width: 40px;
+        right: -21px;
+    }
 }
 
 @keyframes show-image-circle {
@@ -86,6 +121,33 @@
     }
 }
 
+.image-hover-even {
+    height: 394px;
+    width: 620px;
+    position: absolute;
+    top: 25px;
+    left: -25px;
+    border: 4px solid black;
+    opacity: 0;
+    transition: all 125ms ease-in-out;
+
+    @media (max-width: 1440px) {
+        height: 350px;
+        width: 550px;
+    }
+
+    @media (max-width: 1140px) {
+        height: 100%;
+        width: 100%;
+        max-width: 750px;
+    }
+
+    @media (max-width: 576px) {
+        top: 15px;
+        left: -15px;
+    }
+}
+
 .image-circle-even {
     height: 50px;
     width: 50px;
@@ -98,6 +160,12 @@
     transform: translateX(-50%);
     z-index: 99;
     transition: all 125ms ease-in-out;
+
+    @media (max-width: 576px) {
+        height: 40px;
+        width: 40px;
+        left: -48px;
+    }
 }
 
 @keyframes show-image-circle-even {
@@ -119,6 +187,14 @@
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 56px;
+
+    @media (max-width: 1140px) {
+        width: 100%;
+        max-width: 750px;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 0;
+    }
 }
 
 .project-index {
@@ -127,20 +203,52 @@
     align-items: flex-end;
     font: bold 48px 'Syne', sans-serif;
     font-variant-numeric: lining-nums;
+
+    @media (max-width: 1440px) {
+        font-size: 40px;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 32px;
+    }
 }
 
 .project-title {
     font: bold 48px 'Syne', sans-serif;
+
+    @media (max-width: 1440px) {
+        font-size: 40px;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 32px;
+    }
+
+    @media (max-width: 456px) {
+        font-size: 24px;
+    }
 }
 
 .project-stack {
     margin-top: 16px;
     color: var(--color-accent);
+
+    @media (max-width: 1440px) {
+        margin-top: 8px;
+    }
+
+    @media (max-width: 456px) {
+        font-size: 20px;
+    }
 }
 
 .project-description {
     margin-top: 16px;
     font-size: 20px;
+
+    @media (max-width: 1440px) {
+        margin-top: 8px;
+    }
 }
 
 .project-links {
@@ -149,5 +257,17 @@
 
     app-button {
         width: 50%
+    }
+
+    @media (max-width: 320px) {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+
+        app-button {
+            display: flex;
+            justify-content: center;
+        }
     }
 }

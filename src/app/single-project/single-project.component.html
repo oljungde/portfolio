@@ -1,11 +1,12 @@
 <div data-aos="zoom-in" class="project-left">
-    <img src="{{ image }}" alt="" class="project-image">
-    <img [ngClass]="{'image-circle-even': (index ?? 0) % 2 === 1}" src="../../assets/img/circle-arrow.png" alt="" class="image-circle">
-    <div [ngClass]="{'image-hover-even': (index ?? 0) % 2 === 1}" class="image-hover"></div>
-
+    <div class="project-left-content">
+        <img src="{{ image }}" alt="" class="project-image">
+        <img [ngClass]="{'image-circle-even': (index ?? 0) % 2 === 1}" src="../../assets/img/circle-arrow.png" alt="" class="image-circle">
+        <div [ngClass]="{'image-hover-even': (index ?? 0) % 2 === 1}" class="image-hover"></div>
+    </div>
 </div>
 
-<div data-aos="flip-up" data-aos-duration="400" class="project-right">
+<div [attr.data-aos]="((index ?? 0) % 2 === 0) ? 'fade-down-left' : 'fade-down-right'" class="project-right">
     <div class="project-index">
         {{ id }}/{{ projectsAmount }}
     </div>
