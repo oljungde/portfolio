@@ -2,7 +2,7 @@
     min-height: calc(100vh - var(--header-height));
     display: flex;
     flex-direction: column;
-    row-gap: 88px;
+    // row-gap: 88px;
 
     @media (max-width: 1140px) {
         row-gap: 32px;
@@ -26,6 +26,7 @@ p {
     width: 100%;
     max-width: 620px;
     text-align: center;
+    margin-bottom: 96px;
 
     @media (max-width: 576px) {
         font-size: 2rem;
@@ -42,6 +43,10 @@ p {
 
         &:nth-child(even) {
             flex-direction: row-reverse;
+        }
+
+        &:last-of-type {
+            margin-bottom: 48px;
         }
     }
 
@@ -70,5 +75,35 @@ p {
         app-single-project {
             margin-bottom: 64px;
         }
+    }
+}
+
+.arrow-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 96px;
+
+    @media (max-width: 576px) {
+        padding-right: 48px;
+    }
+
+    @media (max-width: 456px) {
+        padding-right: 24px;
+    }
+}
+
+.projects-arrow {
+    width: 215px;
+    height: 215px;
+    object-fit: cover;
+
+    @media (max-width: 576px) {
+        width: 180px;
+        height: 180px;
+    }
+
+    @media (max-width: 456px) {
+        width: 120px;
+        height: 120px;
     }
 }
