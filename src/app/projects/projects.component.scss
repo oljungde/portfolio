@@ -86,6 +86,7 @@ p {
     display: flex;
     justify-content: flex-end;
     padding-right: 96px;
+    z-index: 99;
 
     @media (max-width: 576px) {
         padding-right: 48px;
