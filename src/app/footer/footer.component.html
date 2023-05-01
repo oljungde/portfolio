@@ -4,6 +4,12 @@
         <div class="contact">
             <span>Want to talk about new projects</span>
             <p>Say hello! Let's discuss your ideas and make it happen!</p>
+
+            <div [ngClass]="{ 'loader-hidden': !isSending }" class="overlay">
+                <div class="blur"></div>
+                <div class="loader"></div>
+            </div>
+
             <form #contact_form (submit)="sendMail()" class="contact-form">
                 <div class="input-container">
                     <input #input_name type="text">
@@ -44,4 +50,5 @@
             </div>
         </div>
     </div>
+
 </footer>
