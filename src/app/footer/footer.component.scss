@@ -41,7 +41,7 @@ h2 {
         margin-top: 24px;
     }
 
-    span {
+    span.contact-subline {
         font-size: 3.2rem;
         color: var(--color-accent);
 
@@ -85,13 +85,16 @@ h2 {
     max-width: 600px;
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    // margin: 20px 0;
 }
 
 input,
 textarea {
     width: 100%;
     background-color: black;
+    position: relative;
     padding: 16px 24px;
     border: none;
     border: 3px solid transparent;
@@ -119,36 +122,66 @@ textarea {
     }
 }
 
+input:required:valid,
+textarea:required:valid {
+    border-color: var(--color-background);
+}
+
+
+
+// .validation {
+//     opacity: 0;
+//     font-size: 12px;
+//     font-family: sans-serif;
+//     color: crimson;
+//     transition: opacity;
+// }
+
+
+
+// input:required:invalid:not(:placeholder-shown) {
+//     border-color: crimson;
+// }
+
+// input:required:invalid:not(:placeholder-shown)+.validation {
+//     opacity: 1;
+// }
+
+
+
 textarea {
     background-clip: padding-box;
     resize: vertical;
 }
 
-textarea:focus~.label-textarea {
-    top: 2px;
-}
-
-.label-textarea {
-    position: absolute;
-    top: 32px;
-    left: 24px;
-}
-
-input:focus~label {
-    top: calc(50% - 27px);
-}
-
 label {
-    background-color: black;
+    background: black;
     position: absolute;
-    top: 50%;
-    left: 24px;
+    top: 3px;
+    left: 3px;
     padding: 0 8px;
+    margin: 16px 16px;
     font: 1.6rem 'Overpass', sans-serif;
     color: var(--color-background);
-    transform: translateY(-50%);
     pointer-events: none;
-    transition: all 75ms ease-in-out;
+    transition: all 225ms ease-in-out;
+
+}
+
+input:focus+label,
+textarea:focus+label,
+input:not(:placeholder-shown)+label,
+textarea:not(:placeholder-shown)+label {
+    opacity: 1;
+    transform: translateY(-26px);
+
+}
+
+
+.error-message {
+    font: 1.6rem 'Overpass', sans-serif;
+    color: red;
+    transition: all 225ms ease-in-out;
 }
 
 button {

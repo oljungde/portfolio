@@ -2,7 +2,7 @@
     <div class="footer-content">
         <h2>Say Hi!</h2>
         <div class="contact">
-            <span>Want to talk about new projects</span>
+            <span class="contact-subline">Want to talk about new projects</span>
             <p>Say hello! Let's discuss your ideas and make it happen!</p>
 
             <div [ngClass]="{ 'loader-hidden': !isSending }" class="overlay">
@@ -10,24 +10,35 @@
                 <div class="loader"></div>
             </div>
 
-            <form #contact_form (submit)="sendMail()" class="contact-form">
+            <form [formGroup]="contactForm" (ngSubmit)="sendMail()" class="contact-form">
                 <div class="input-container">
-                    <input #input_name type="text">
+                    <input type="text" formControlName="name" placeholder=" " required>
                     <label>Your name</label>
+                    <div *ngIf="contactForm.controls['name'].invalid && (submitted || contactForm.controls['name'].dirty || contactForm.controls['name'].touched)">
+                        <p class="error-message">Please enter your name.</p>
+                    </div>
                 </div>
 
                 <div class="input-container">
-                    <input #input_email type="email">
+                    <input type="email" formControlName="email" placeholder=" " required>
                     <label>Your email</label>
+                    <div *ngIf="contactForm.controls['email'].errors && (submitted || contactForm.controls['email'].dirty || contactForm.controls['email'].touched)">
+                        <p *ngIf="contactForm.controls['email'].errors['required']" class="error-message">Please enter your email adress.</p>
+                        <p *ngIf="contactForm.controls['email'].errors['email'] && contactForm.controls['email'].touched" class="error-message">Please enter avalid email adress.</p>
+                    </div>
                 </div>
 
                 <div class="input-container">
-                    <textarea #input_message rows="9"></textarea>
-                    <label for="textarea" class="label-textarea">Your message</label>
+                    <textarea formControlName="message" rows="9" placeholder=" " required></textarea>
+                    <label>Your message</label>
+                    <div *ngIf="contactForm.controls['message'].errors && (submitted || contactForm.controls['message'].dirty || contactForm.controls['message'].touched)">
+                        <p *ngIf="contactForm.controls['message'].errors['required']" class="error-message">Please enter your message.</p>
+                        <p *ngIf="contactForm.controls['message'].errors['minlength'] && contactForm.controls['message'].touched" class="error-message">Please enter a message with at least 10
+                            characters.</p>
+                    </div>
                 </div>
-                <button #btn_send type="submit">Send Message</button>
+                <button type="submit" [disabled]="isSending">Send Message</button>
             </form>
-
         </div>
 
         <div class="footer-endline">
