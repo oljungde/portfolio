@@ -1,5 +1,5 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { FormControl, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-footer',
@@ -9,17 +9,9 @@ import { FormControl, FormGroup, Validators, AbstractControl } from '@angular/fo
 export class FooterComponent {
   linkTo: string = '';
   linkName: string = 'Send message';
-  // @ViewChild('contact_form') contactForm!: ElementRef;
-  // @ViewChild('input_name') inputName!: ElementRef;
-  // @ViewChild('input_email') inputEmail!: ElementRef;
-  // @ViewChild('input_message') inputMessage!: ElementRef;
-  // @ViewChild('btn_send') btnSend!: ElementRef;
-  // inputNameEle!: HTMLInputElement;
-  // inputEmailEle!: HTMLInputElement;
-  // inputMessageEle!: HTMLInputElement;
-  // btnSendEle!: HTMLInputElement;
   isSending: boolean = false;
   submitted: boolean = false;
+  sends: boolean = false;
 
 
   contactForm = new FormGroup({
@@ -29,67 +21,27 @@ export class FooterComponent {
   });
 
 
-  ngAfterViewInit() {
-    // this.inputNameEle = this.inputName.nativeElement;
-    // this.inputEmailEle = this.inputEmail.nativeElement;
-    // this.inputMessageEle = this.inputMessage.nativeElement;
-    // this.btnSendEle = this.btnSend.nativeElement; 
-  }
-
-
-//   onFocus(event: FocusEvent) {
-//   const target = event.target as HTMLInputElement;
-//   const placeholder = target.nextElementSibling as HTMLElement;
-//   if (placeholder) {
-//     placeholder.classList.add("focus");
-//   }
-// }
-
-// onBlur(event: FocusEvent) {
-//   const target = event.target as HTMLInputElement;
-//   const placeholder = target.nextElementSibling as HTMLElement;
-//   if (placeholder && !target.value) {
-//     placeholder.classList.remove("focus");
-//   }
-// }
-  
-// checkInputValue(control: AbstractControl | null): boolean {
-//   if (control) {
-//     return control.value;
-//   }
-//   return false;
-// }
-
-
   async sendMail() {
     this.submitted = true;
-    if (this.contactForm.invalid) {
-      return;
-    }
-    
-    console.log('sending mail', this.contactForm);
-    this.disableContactForm();
-// debugger;
+    this.checkAndDisableContactForm();
     this.isSending = true;
-    // debugger;
-    // Animation send E-Mail
     let formData = new FormData();
     this.setFormData(formData);
-    // senden
     await fetch('https://www.oliver-jung.dev/send_mail.php', {
       method: 'POST',
       body: formData
     });
-
     this.isSending = false;
     this.submitted = false;
-    // Text Nachricht gesendetEle
-    this.clearContactForm();
-    this.enableContactForm();
+    this.sendsMessage();
+    this.resetContactForm();
   }
 
 
-  disableContactForm() {
+  checkAndDisableContactForm() {
+     if (this.contactForm.invalid) {
+      return;
+    }
     this.contactForm.disable();
   }
 
@@ -104,15 +56,19 @@ setFormData(formData: FormData) {
       formData.append('email', email);
       formData.append('message', message);
     }
-}
-
-
-  clearContactForm() {
-    this.contactForm.reset();
   }
 
 
-  enableContactForm() {
+  sendsMessage() {
+    this.sends = true;
+    setTimeout(() => {
+      this.sends = false;
+    }, 3000);
+  }
+
+  
+  resetContactForm() {
+    this.contactForm.reset();
     this.contactForm.enable();
   }
 }
