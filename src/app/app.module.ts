@@ -15,6 +15,8 @@ import { ButtonComponent } from './button/button.component';
 import { HeaderOffsetDirective } from './header-offset.directive';
 import { SingleProjectComponent } from './single-project/single-project.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     ButtonComponent,
     HeaderOffsetDirective,
-    SingleProjectComponent
+    SingleProjectComponent,
+    LegalNoticeComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,

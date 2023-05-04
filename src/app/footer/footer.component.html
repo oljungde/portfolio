@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="input-container">
-                    <textarea formControlName="message" rows="8" placeholder=" " required></textarea>
+                    <textarea formControlName="message" rows="7" placeholder=" " required></textarea>
                     <label>Your message</label>
                     <div class="error-container">
                         <div *ngIf="contactForm.controls['message'].errors && (submitted || contactForm.controls['message'].dirty || contactForm.controls['message'].touched)">
@@ -65,8 +65,8 @@
                 </div>
 
                 <div class="footer-legal">
-                    <a href="#">Legal Notice</a> |
-                    <a href="#">Privacy Policy</a>
+                    <a routerLink="/legal-notice">Legal Notice</a> |
+                    <a href="/privacy-policy">Privacy Policy</a>
                 </div>
             </div>
         </div>
