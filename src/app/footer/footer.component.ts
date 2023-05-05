@@ -71,4 +71,9 @@ setFormData(formData: FormData) {
     this.contactForm.reset();
     this.contactForm.enable();
   }
+
+
+  scrollToTop() {
+    window.scrollTo(0, 0);
+  }
 }
