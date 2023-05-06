@@ -7,7 +7,7 @@
             <div class="above-name">Oliver Jung</div>
         </div>
 
-        <app-button [linkTo]="linkTo" [linkName]="linkName"></app-button>
+        <app-button [linkTo]="linkTo" [linkTarget]="'_self'" [linkName]="linkName"></app-button>
     </div>
 
     <div class="email-scroll">
@@ -15,8 +15,8 @@
             <a href="mailto:hello@oliver-jung.dev">hello@oliver-jung.de</a>
         </div>
         <div appHeaderOffset class="scrolling">
-            <a href="#about-me"><img src="assets/img/scroll-down.png" alt=""></a>
-            <a href="#about-me">Scroll<br>Down</a>
+            <a routerLink="/" fragment="about_me"><img src="assets/img/scroll-down.png" alt=""></a>
+            <a routerLink="/" fragment="about_me">Scroll<br>Down</a>
         </div>
     </div>
 </section>

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent {
-  linkTo: string = '#';
+  linkTo: string = '#contact';
   linkName: string = `Lets's talk`;
   
 }

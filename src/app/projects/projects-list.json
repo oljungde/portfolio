@@ -5,7 +5,7 @@
         "image": "../../assets/img/pokedex.png",
         "stack": "JavaScript | HTML | CSS",
         "description": "The Pokédex is a digital encyclopedia, providing detailed information on various Pokémon species, their abilities, and evolutions.",
-        "url": "pokedex.oliver-jung.dev",
+        "url": "https://pokedex.oliver-jung.dev",
         "git": "https://github.com/oljungde/pokedex"
     },
     {
@@ -14,7 +14,7 @@
         "image": "../../assets/img/join.png",
         "stack": "JavaScript | HTML | CSS",
         "description": "Task management according to the Kanban principle. Creation and organisation of tasks in different categories with drag and drop function.",
-        "url": "join.oliver-jung.dev",
+        "url": "https://join.oliver-jung.dev",
         "git": "https://github.com/oljungde/join_1.1"
     },
     {
@@ -22,8 +22,8 @@
         "name": "El Pollo Loco",
         "image": "../../assets/img/el-pollo-loco.png",
         "stack": "JavaScript | OOP | HTML | CSS",
-        "description": "Object-oriented classic Jump'n' in JavaScript. Help Pepe defeat the crazy chickens",
-        "url": "el-pollo-loco.oliver-jung.dev",
+        "description": "Object-oriented classic Jump'n' in JavaScript. Help Pepe defeat the crazy chickens.",
+        "url": "https://el-pollo-loco.oliver-jung.dev",
         "git": "https://github.com/oljungde/el-pollo-loco"
     },
     {

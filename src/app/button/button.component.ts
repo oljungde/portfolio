@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ButtonComponent {
   @Input() linkTo: string | undefined;
-  @Input () linkName : string | undefined;
+  @Input() linkName : string | undefined;
+  @Input() linkTarget : string | undefined;
 
 }
