@@ -22,8 +22,13 @@ export class FooterComponent {
 
 
   async sendMail() {
+    // debugger;
     this.submitted = true;
-    this.checkAndDisableContactForm();
+    if (this.contactForm.invalid) {
+        return;
+    }
+    this.contactForm.disable();
+    
     this.isSending = true;
     let formData = new FormData();
     this.setFormData(formData);
@@ -33,16 +38,9 @@ export class FooterComponent {
     });
     this.isSending = false;
     this.submitted = false;
+    // debugger;
     this.sendsMessage();
     this.resetContactForm();
-  }
-
-
-  checkAndDisableContactForm() {
-    if (this.contactForm.invalid) {
-      return;
-    }
-    this.contactForm.disable();
   }
 
 

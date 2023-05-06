@@ -25,23 +25,5 @@
         "description": "Object-oriented classic Jump'n' in JavaScript. Help Pepe defeat the crazy chickens.",
         "url": "https://el-pollo-loco.oliver-jung.dev",
         "git": "https://github.com/oljungde/el-pollo-loco"
-    },
-    {
-        "id": 4,
-        "name": "Tic Tac Toe",
-        "image": "../../assets/img/tic-tac-toe.png",
-        "stack": "JavaScript | OOP | HTML  CSS",
-        "description": "Tic Tac Toe game with a simple AI",
-        "url": "tic-tac-toe.oliver-jung.dev",
-        "git": "https://github.com/oljungde/pokedex"
-    },
-    {
-        "id": 5,
-        "name": "Weather App",
-        "image": "../../assets/img/weather.png",
-        "stack": "JavaScript | HTML | CSS",
-        "description": "Weather app with current weather and 5 day forecast",
-        "url": "weather-app.oliver-jung.dev",
-        "git": "https://github.com/oljungde/pokedex"
     }
 ]
