@@ -39,14 +39,14 @@ export class FooterComponent {
 
 
   checkAndDisableContactForm() {
-     if (this.contactForm.invalid) {
+    if (this.contactForm.invalid) {
       return;
     }
     this.contactForm.disable();
   }
 
 
-setFormData(formData: FormData) {
+  setFormData(formData: FormData) {
     const name = this.contactForm.get('name')?.value;
     const email = this.contactForm.get('email')?.value;
     const message = this.contactForm.get('message')?.value;

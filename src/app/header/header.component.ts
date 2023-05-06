@@ -31,7 +31,6 @@ export class HeaderComponent {
 
 
   toggleMenu() {
-    console.log('toggle menu');
     this.menuOpen = !this.menuOpen;
     const hamburgerBtn = document.querySelector('.hamburger');
     hamburgerBtn?.classList.remove('no-animation');
@@ -39,7 +38,7 @@ export class HeaderComponent {
   }
 
 
-    closeMenu() {
+  closeMenu() {
     this.menuOpen = false;
     const hamburgerBtn = document.querySelector('.hamburger');
     hamburgerBtn?.classList.remove('no-animation');
