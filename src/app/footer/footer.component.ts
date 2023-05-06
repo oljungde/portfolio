@@ -50,6 +50,7 @@ export class FooterComponent {
     const name = this.contactForm.get('name')?.value;
     const email = this.contactForm.get('email')?.value;
     const message = this.contactForm.get('message')?.value;
+    
 
     if (name && email && message) {
       formData.append('name', name);
@@ -66,7 +67,7 @@ export class FooterComponent {
     }, 3000);
   }
 
-  
+
   resetContactForm() {
     this.contactForm.reset();
     this.contactForm.enable();

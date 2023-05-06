@@ -18,4 +18,5 @@ export class ProjectsComponent {
     url: string,
     git: string
   }[] = projectsList;
+  
 }

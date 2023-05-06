@@ -15,12 +15,13 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
   ],
 })
 
+
 export class HeaderComponent {
   menuOpen = false;
   @ViewChild('menu') menu: ElementRef | undefined;
 
   constructor(private renderer: Renderer2) { }
-  
+
 
   ngAfterViewInit() {
     const menuLinks = this.menu?.nativeElement.querySelectorAll('a');

@@ -41,8 +41,6 @@
     .about-me-headline {
         width: 100%;
         text-align: left;
-
-
     }
 
     p {
@@ -63,8 +61,6 @@
     justify-content: flex-start;
     align-items: center;
     gap: 24px;
-
-    @media (max-width: 576px) {}
 
     .about-me-img {
         min-width: 530px;
