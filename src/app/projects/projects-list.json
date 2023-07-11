@@ -22,8 +22,17 @@
         "name": "El Pollo Loco",
         "image": "../../assets/img/el-pollo-loco.png",
         "stack": "JavaScript | OOP | HTML | CSS",
-        "description": "Object-oriented classic Jump'n' in JavaScript. Help Pepe defeat the crazy chickens.",
+        "description": "Object-oriented classic Jump'n'Run Game  in JavaScript. Help Pepe defeat the crazy chickens.",
         "url": "https://el-pollo-loco.oliver-jung.dev",
         "git": "https://github.com/oljungde/el-pollo-loco"
+    },
+    {
+        "id": 4,
+        "name": "simpleCRM",
+        "image": "../../assets/img/simpleCRM.png",
+        "stack": "Angular | TypeScript | HTML | SCSS",
+        "description": "Customer Relationship Management System. Create and edit customers and their requests.",
+        "url": "https://simple-crm.oliver-jung.dev",
+        "git": "https://github.com/oljungde/simple-crm"
     }
 ]
