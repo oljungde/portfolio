@@ -27,7 +27,8 @@
                     <div class="error-container">
                         <div *ngIf="contactForm.controls['email'].errors && (submitted || contactForm.controls['email'].dirty || contactForm.controls['email'].touched)">
                             <p *ngIf="contactForm.controls['email'].errors['required']" class="error-message">Please enter your email adress.</p>
-                            <p *ngIf="contactForm.controls['email'].errors['email'] && contactForm.controls['email'].touched" class="error-message">Please enter a valid email adress.</p>
+                            <p *ngIf="contactForm.controls['email'].errors['email'] && contactForm.controls['email'].touched" class="error-message">Please enter a valid email
+                                adress.</p>
                         </div>
                     </div>
                 </div>
@@ -38,7 +39,8 @@
                     <div class="error-container">
                         <div *ngIf="contactForm.controls['message'].errors && (submitted || contactForm.controls['message'].dirty || contactForm.controls['message'].touched)">
                             <p *ngIf="contactForm.controls['message'].errors['required']" class="error-message">Please enter your message.</p>
-                            <p *ngIf="contactForm.controls['message'].errors['minlength'] && contactForm.controls['message'].touched" class="error-message">Please enter a message with at least 10
+                            <p *ngIf="contactForm.controls['message'].errors['minlength'] && contactForm.controls['message'].touched" class="error-message">Please enter a message
+                                with at least 10
                                 characters.</p>
                         </div>
                     </div>
@@ -66,7 +68,7 @@
 
                 <div class="footer-legal">
                     <a routerLink="/legal-notice">Legal Notice</a> |
-                    <a href="/privacy-policy">Privacy Policy</a>
+                    <a routerLink="/privacy-policy">Privacy Policy</a>
                 </div>
 
             </div>
